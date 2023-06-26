@@ -7,7 +7,8 @@ const routes: Routes = [
   //Sistema de rutas
   {path:'', redirectTo:'/inicio', pathMatch:'full'},
   {path:'inicio', component:DashboardComponent},
-  {path:'iniciar-sesion', component:LoginComponent}
+  {path:'iniciar-sesion', component:LoginComponent},
+  {path:'log-out', component: DashboardComponent}
 ];
 
 @NgModule({
@@ -15,3 +16,4 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
+

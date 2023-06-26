@@ -1,11 +1,23 @@
 
-<app-navbar></app-navbar>
-<p *ngIf="!userLoginOn">USUARIO NO AUTENTICADO</p>
-<p *ngIf="userLoginOn">USUARIO AUTENTICADO</p>
+<div class="content">
+
+<p *ngIf="!userLoginOn"> USER UNAUTHENTICATED </p>
+<div *ngIf="!userLoginOn" class="unauth">
+  <h1>Please Login</h1>
+  <img class="badrequest" src="../../../assets/badrequest.PNG">
+</div>
+
+<p class="auth" *ngIf="userLoginOn">USER AUTHENTICATED</p>
+
+<div *ngIf="userLoginOn" class="container">
+  <h1>Please upload a document type .csv</h1> <br>
+</div>
+
 <div *ngIf="userLoginOn" class="file-container">
   <input type="file" (change)="getFile($event)" class="file">
 </div>
 <div *ngIf="file">
   File Name: {{file.name}}<br>
   <button (click)="file=undefined">Clear File</button>
+</div>
 </div>

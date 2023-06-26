@@ -2,20 +2,66 @@
   margin: 0;
 }
 .navbar {
-  background: #1A4314;
-  font-family: Verdana;
-  font-size: 20px;
+  background-color: rgb(4, 137, 160);
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 16px;
   color: #CDCDCD;
   li{
-    display: inline;
+    display: flex;
 
     a {
       color: #CDCDCD;
       text-decoration: none;
-          padding: 14px 16px;
+      padding: 4px;
       &:hover {
       text-decoration: underline;
       }
     }
   }
   }
+.main-container{
+  display: flex;
+  @media only screen and (max-width: 860px){
+    width: max-content;
+    height: max-content;
+  }
+  .side-nav{
+    width: 350px;
+    min-width: 230px;
+    min-height: calc(100vh - 70px);
+    background-color: #113c60;
+    color: #fff;
+    box-shadow: 5px 5px 5px #939393;
+    @media only screen and (max-width: 860px){
+      width: 150px;
+      min-width: 150px;
+      height: max-content;
+    }
+  }
+  .main{
+    padding: 0px;
+  }
+}
+.nav-items{
+  padding-top: 10px;
+  .nav-item{
+    padding: 15px 5px;
+    cursor: pointer;
+    @media only screen and (max-width: 1300px){
+      padding: 5px 4px;
+    }
+    &:hover{
+      background-color: #11998e;
+      color: #000;
+    }
+    span{
+      display: inline;
+      @media only screen and (max-width: 1300px){
+        display: inline-flexbox;
+
+      }
+    }
+  }
+}
+
+

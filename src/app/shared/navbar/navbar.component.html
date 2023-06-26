@@ -1,8 +1,25 @@
 
-<nav class="navbar">
+<!-- <nav class="navbar">
   <ul>
     <li><a class="" routerLink="/inicio">Dashboard</a></li>
     <li *ngIf="!userLoginOn"><a routerLink="/iniciar-sesion">Iniciar Sesión</a></li>
     <li *ngIf="userLoginOn"><a routerLink="/inicio">Cerrar Sesión</a></li>
   </ul>
-</nav>
+</nav> -->
+
+<div class="nav-items navbar">
+  <ul class="nav-items">
+    <div class="nav-item">
+      <li><a class="" routerLink="/inicio">Dashboard</a></li>
+    </div>
+<div class="nav-item">
+  <li *ngIf="!userLoginOn"><a routerLink="/iniciar-sesion">Login</a></li>
+</div>
+<div class="nav-item">
+  <li *ngIf="userLoginOn"><a routerLink="/inicio">Log out</a></li>
+</div>
+</ul>
+</div>
+
+
+

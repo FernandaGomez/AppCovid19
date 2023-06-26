@@ -52,7 +52,7 @@ export class LoginComponent {
     }
     else{
       this.loginForm.markAllAsTouched();
-      alert("Error al ingresar los datos");
+      console.error("Data entry error");
     }
   }
 
