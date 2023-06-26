@@ -1,23 +1,49 @@
 
 <div class="content">
+<div *ngIf="!file">
+  <p *ngIf="!userLoginOn"> USER UNAUTHENTICATED </p>
+    <div *ngIf="!userLoginOn" class="unauth">
+      <h1>Please Login</h1>
+      <img class="badrequest" src="../../../assets/badrequest.PNG">
+    </div>
 
-<p *ngIf="!userLoginOn"> USER UNAUTHENTICATED </p>
-<div *ngIf="!userLoginOn" class="unauth">
-  <h1>Please Login</h1>
-  <img class="badrequest" src="../../../assets/badrequest.PNG">
-</div>
+    <p class="auth" *ngIf="userLoginOn">USER AUTHENTICATED</p>
 
-<p class="auth" *ngIf="userLoginOn">USER AUTHENTICATED</p>
-
-<div *ngIf="userLoginOn" class="container">
-  <h1>Please upload a document type .csv</h1> <br>
-</div>
+    <div *ngIf="userLoginOn" class="container">
+      <h1>Please upload a document type .csv</h1> <br>
+    </div>
 
 <div *ngIf="userLoginOn" class="file-container">
   <input type="file" (change)="getFile($event)" class="file">
 </div>
+</div>
 <div *ngIf="file">
   File Name: {{file.name}}<br>
-  <button (click)="file=undefined">Clear File</button>
+  <!-- <button (click)="file=undefined">Clear File</button> -->
+  <br><br>
+  <!-- Al final tuve que realizarlo de forma manual, por problemas con la librería xlsx, que permite la lectura y analisis de los datos
+  desde un csv.  -->
+  <div class="wrapper">
+    <div class="one"> <br>
+      <h3> Estado con mayor acumulado a la fecha </h3>
+      <p>RTA/: El estado con mayor acumulado a la fecha
+        es California, con 23804 muertes hasta el
+        27 de abril del 2021 </p>
+    </div>
+    <div class="two"> <br>
+      <h3> Estado con menor acumulado a la fecha </h3>
+      <p>RTA/: Wyoming es uno de los estados con menor acumulado
+        muertes, con un máximo de 140 muertes para 21 de abril del 2020.
+      </p>
+    </div>
+    <div class="three"> <br>
+      <h3> ¿Cuál fue el estado más afectado y por qué? </h3>
+      <p>RTA/: Alabama fue el estado con mayor afectación
+        en pandemia, por qué es el que tiene mayor rango de
+        muertes en sus provincias con un total de 232347 muertes.
+      </p>
+    </div>
+  </div>
 </div>
 </div>
+app-pie-chart

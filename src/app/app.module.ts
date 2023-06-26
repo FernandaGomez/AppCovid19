@@ -10,6 +10,7 @@ import { LoginComponent } from './auth/login/login.component';
 import { NavbarComponent } from './shared/navbar/navbar.component';
 import { ReactiveFormsModule} from '@angular/forms'
 import { HttpClientModule } from '@angular/common/http';
+import { PieChartComponent } from './shared/pie-chart/pie-chart.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { HttpClientModule } from '@angular/common/http';
     FooterComponent,
     DashboardComponent,
     LoginComponent,
-    NavbarComponent
+    NavbarComponent,
+    PieChartComponent,
   ],
   imports: [
     BrowserModule,

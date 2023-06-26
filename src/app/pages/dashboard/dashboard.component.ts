@@ -21,7 +21,13 @@ export class DashboardComponent {
   getFile(event: any){
     this.file = event.target.files[0];
 
-    console.log('file', this.file)
+    // console.log('file', this.file);
+    // const selectedFile = this.file[0];
+    // const fileReader = new FileReader();
+    // fileReader.readAsBinaryString(selectedFile);
+    // fileReader.onload = (event) => {
+    //   console.log(event);
+    // }
   }
 
   ngOnInit(): void {
