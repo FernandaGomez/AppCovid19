@@ -11,3 +11,11 @@ body{
   font-family: "Arial";
   background-color: #ffffff;
 }
+
+.ng-valid:not(form).ng-touched {
+  border: 3px solid #42A948;
+}
+
+.ng-invalid:not(form).ng-touched {
+  border: 3px solid #a94442;
+}

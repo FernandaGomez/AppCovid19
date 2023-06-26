@@ -1,12 +1,21 @@
 <form action="" id="basicForm" [formGroup]="loginForm">
+  <p class="alerta"> {{loginError}}</p>
   <p>
     <label id="username">Your username</label>
-    <input formControlName="username" type="text">
-  </p>
+    <input formControlName="username" type="text"> <br>
+    <div *ngIf="username.invalid && (username.dirty || username.touched)" class="alerta">
+      <div *ngIf="username.errors?.['required']">
+        The username is required
+      </div>
+    </div>
   <p>
     <label id="password">Your password</label>
     <input formControlName="password" type="password">
-  </p>
+    <div *ngIf="password.invalid && (password.dirty || password.touched)" class="alerta">
+      <div *ngIf="password.errors?.['required']">
+        The password is required
+      </div>
+    </div>
   <p>
     <button type="submit" (click)="login()"> LOGIN </button>
   </p>

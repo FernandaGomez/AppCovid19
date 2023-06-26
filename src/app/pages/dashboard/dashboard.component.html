@@ -2,3 +2,10 @@
 <app-navbar></app-navbar>
 <p *ngIf="!userLoginOn">USUARIO NO AUTENTICADO</p>
 <p *ngIf="userLoginOn">USUARIO AUTENTICADO</p>
+<div *ngIf="userLoginOn" class="file-container">
+  <input type="file" (change)="getFile($event)" class="file">
+</div>
+<div *ngIf="file">
+  File Name: {{file.name}}<br>
+  <button (click)="file=undefined">Clear File</button>
+</div>
